@@ -25,5 +25,18 @@ def Modulo(a):
 def Conjugado(a):
     na=a[1]*-1
     return(a[0],na)
+def ConversionPolarACartesiana(r,alfa):
+    x=r*(math.cos(math.radians(alfa)))
+    y=r*(math.sin(math.radians(alfa)))
+    return (x,y)
+
+def ConversionCartesianaAPolar(x,y):
+    r=math.sqrt((x*x)+(y*y))
+    alfa=math.degrees(math.atan(y/x))
+    return (r,alfa)
+
+def Fase(a):
+    fase=math.degrees(math.atan(a[1]/a[0]))
+    return fase
 if __name__ == '__main__':
     print(Suma((3, 5), (-2.6, 6.8)))
